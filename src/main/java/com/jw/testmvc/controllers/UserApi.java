@@ -14,10 +14,10 @@ import com.jw.testmvc.models.User;
 import com.jw.testmvc.services.UserService;
 
 @RestController
-public class BooksApi {
+public class UserApi {
 	private final UserService uServ;
 	
-	public BooksApi(UserService uServ) {
+	public UserApi(UserService uServ) {
 		this.uServ = uServ;
 	}
 	
