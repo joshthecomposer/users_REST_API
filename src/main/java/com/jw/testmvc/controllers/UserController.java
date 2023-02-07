@@ -16,7 +16,7 @@ public class UserController {
 	UserService uServ;
 	
 	@GetMapping("/users/{id}")
-	public String index(
+	public String viewOne(
 			Model m,
 			@PathVariable("id") Long id
 			) {
@@ -24,4 +24,11 @@ public class UserController {
 		m.addAttribute("u", u);
 		return "/show.jsp";
 	}
+	
+	@GetMapping("/users")
+	public String index(Model m) {
+		m.addAttribute("users", uServ.allUsers());
+		return "/index.jsp";
+	}
+	
 }
