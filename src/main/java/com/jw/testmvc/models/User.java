@@ -22,10 +22,10 @@ public class User {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	@NotNull
-	@Size(min = 5, max = 255)
+	@Size(min = 1, max = 255)
 	private String first;
 	@NotNull
-	@Size(min=5, max = 255)
+	@Size(min=1, max = 255)
 	private String last;
 	@NotNull
 	@Size(min=6, max = 255)

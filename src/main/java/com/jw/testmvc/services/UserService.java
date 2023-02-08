@@ -33,6 +33,10 @@ public class UserService {
 		}
 	}
 	
+	public User updateUser(User u) {
+		return userRepo.save(u);
+	}
+	
 	public void destroy(Long id) {
 		userRepo.deleteById(id);
 	}

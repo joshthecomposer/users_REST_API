@@ -26,6 +26,7 @@
 			<p>Created: <fmt:formatDate value="${u.created_at}" pattern="MMMM d, yyyy"/></p>
 			<div class="d-flex gap-3 my-3">
 				<a class="btn btn-outline-primary btn-sm" href="/users/${u.id}">View</a>
+				<a class="btn btn-outline-primary btn-sm" href="/users/${u.id}/edit">Edit</a>
 				<a class="btn btn-outline-danger btn-sm" href="/users/delete/${u.id}">Delete</a>
 			</div>
 			<hr>
