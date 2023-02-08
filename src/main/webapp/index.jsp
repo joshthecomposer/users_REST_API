@@ -2,6 +2,8 @@
 <!-- New line below to use the JSP Standard Tag Library -->
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page isErrorPage="true" %>
 
 <!DOCTYPE html>
 <html>
@@ -27,7 +29,10 @@
 			<div class="d-flex gap-3 my-3">
 				<a class="btn btn-outline-primary btn-sm" href="/users/${u.id}">View</a>
 				<a class="btn btn-outline-primary btn-sm" href="/users/${u.id}/edit">Edit</a>
-				<a class="btn btn-outline-danger btn-sm" href="/users/delete/${u.id}">Delete</a>
+				<form:form action="/users/delete/${u.id}" method="POST">
+					<input type="hidden" name="_method" value="DELETE"  />
+					<button type="submit"class="btn btn-outline-danger btn-sm">Delete</button>
+				</form:form>
 			</div>
 			<hr>
 		</c:forEach>
